@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/icon.jpg">
+  <title>予約ページ</title>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <div class="contact-left-title">
+        <h2>予約フォーム</h2>
+        <hr>
+      </div>
+      <input type="hidden" name="access_key" value="3f1d91ca-ee69-48b2-a04a-4f39f5cd4cc9">
+      <input type="text" name="name" placeholder="名前" class="contact-inputs" required>
+      <input type="email" name="email" placeholder="メールアドレス" class="contact-inputs" required>
+      <input type="datetime-local" id="date" name="date" class="contact-inputs" placeholder="希望日時">
+      <textarea name="message" placeholder="ご要望リクエスト等" class="contact-inputs" required></textarea>
+      <button type="submit">予約する<img src="images/arrow_icon.png"></button>
+    </form>
+    <div class="contact-right">
+      <img src="images/fune_art.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
+

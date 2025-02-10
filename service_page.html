@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="/images/icon.jpg">
+    <title>HatenaMakun</title>
+</head>
+
+<body>
+    <header id="he-ad"></header>
+    <div class="scrolldown2"><span>Scroll</span></div>
+
+<main>
+
+    <section id="sec02">
+        <h2>
+            <span class="h2rod"></span>
+            <span class="h2txt">レンタルポートを始めました！</span>
+        </h2>
+        <li class="ulu">
+            萩尾ため池・猫の追ため池 等
+        </li>
+        <dl>
+            <dt>パント１１ft(免許不要舩・フットコン仕様)</dt>
+            <dd>一日コース➜ 午前 ６：００ ～ 午後 ６：００まで ￥９０００円</dd>
+            <dd>半日コース➜ 午前 ６：００ ～ 正午まで ￥７０００円</dd>
+            <dd>正午 ～ 午後まで ￥７０００円</dd>
+            
+            <dt>ゴムボート(ハンドエレキ付き)</dt>
+            <dd>一日コース➜ 午前 ６：００ ～ 午後 ６：００まで ￥７０００円</dd>
+            <dd>半日コース➜ 午前 ６：００ ～ 正午まで ￥５０００円</dd>
+            <dd>正午 ～ 午後まで ￥５０００円</dd>
+        </dl>
+    </section>
+
+    <section id="sec01">
+        <h2>
+            <span class="h2rod"></span>
+            <span class="h2txt">その他(氷川ダム・緑川ダム・市房ダム等)のフィールド要相談！</span>
+        </h2>
+        <ul class="ulu3">
+            <li class="ulu4">
+                予約はここをクリック ➜
+                <button class="btn btn-success" type="submit"><a href="yoyaku_page.html">予約フォームへ</a></button>
+            </li>
+        </ul>
+    </section>
+
+    <p class="js-scroll scroll-top scroll-view"><a href="#sec02">Scroll</a></p>
+    <p class="js-pagetop scroll-top"><a href="#he-ad">Page Top</a></p>
+</main>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollTopButton = document.querySelector('.js-scroll');
+    const pageTopButton = document.querySelector('.js-pagetop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+
+            scrollTopButton.classList.remove('scroll-view');
+            pageTopButton.classList.add('scroll-view');
+        } else {
+
+            scrollTopButton.classList.add('scroll-view');
+            pageTopButton.classList.remove('scroll-view');
+        }
+    });
+});
+</script>
+
+<div class="font">
+    <h3><i class="fa-solid fa-mobile" style="color: #000; font-size: 14px"></i> 090-8628-6286(本田)</h3>
+    <h3><i class="fa-solid fa-location-dot" style="color: #000; font-size: 14px"></i>九州</h3>
+</div>
+
+    <script src="https://kit.fontawesome.com/83e72ec066.js" crossorigin="anonymous"></script>
+</body>
+<footer>
+    Copyright &copy; <script>var hiduke=new Date();document.write(hiduke.getFullYear());</script> HatenaMakun. All rights reserved.
+</footer>
+
+
