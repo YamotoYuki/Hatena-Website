@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('hero-bg.jpg') center/cover;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.news-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto; /* 自然なサイズで表示 */
+    max-height: 150px; /* 最大高さを設定して大きすぎる画像を抑える */
+    object-fit: cover; /* 画像の比率を維持しながらトリミング */
+}
+
+
+.news-card h3 {
+    padding: 15px;
+    font-size: 1.4rem;
+}
+
+.news-card p {
+    padding: 0 15px;
+    font-size: 1rem;
+}
+
+.read-more {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
