@@ -8,6 +8,18 @@
       <link rel="stylesheet" href="css/news.css">
   </head>
   <body>
+
+    <div class="openbtn"><div class="openbtn-area"><span></span><span></span><span></span></div></div>
+    <nav id="g-nav">
+    <div id="g-nav-list">
+    <ul>
+        <li><a href="news.html">ニュース</a></li>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="yoyaku_page.html">予約ページ</a></li>
+        <li><a href="toukou.html">投稿</a></li>
+    </ul>
+    </div>
+    </nav>
   
       <header>
           <h1>HOST NEWS</h1>
@@ -15,77 +27,23 @@
   
       <section class="hero">
           <h2>最新のニュース</h2>
-          <p>最もホットな話題をお届けします</p>
       </section>
   
       <section class="news-grid">
           <article class="news-card">
               <img src="news1.jpg" alt="ニュース画像">
-              <h3>話題のNo.1ホストが登場！</h3>
-              <p>注目のホストがついに登場！その魅力に迫る。</p>
-              <a href="#" class="read-more">続きを読む</a>
           </article>
   
           <article class="news-card">
               <img src="news2.jpg" alt="ニュース画像">
-              <h3>売上ランキングTOP3</h3>
-              <p>最新の売上ランキングを発表！</p>
-              <a href="#" class="read-more">続きを読む</a>
           </article>
   
           <article class="news-card">
               <img src="news3.jpg" alt="ニュース画像">
-              <h3>話題の新人特集</h3>
-              <p>今年の注目新人ホストを徹底分析！</p>
-              <a href="#" class="read-more">続きを読む</a>
           </article>
       </section>  
   </body>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const newsContainer = document.querySelector('.news-grid');
-        let newsList = JSON.parse(localStorage.getItem('news')) || [];
-
-        newsContainer.innerHTML = newsList.map(news => `
-            <article class="news-card">
-                <img src="${news.image}" alt="ニュース画像">
-                <h3>${news.title}</h3>
-                <p>${news.content}</p>
-                <small>${news.date}</small>
-            </article>
-        `).join('');
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const newsContainer = document.querySelector('.news-grid');
-        let newsList = JSON.parse(localStorage.getItem('news')) || [];
-
-        function renderNews() {
-            newsContainer.innerHTML = newsList.map((news, index) => `
-                <article class="news-card">
-                    <img src="${news.image}" alt="ニュース画像">
-                    <h3>${news.title}</h3>
-                    <p>${news.content}</p>
-                    <small>${news.date}</small>
-                    <button class="delete-btn" onclick="deletePost(${index})">削除</button>
-                </article>
-            `).join('');
-        }
-
-        window.deletePost = function(index) {
-            if (confirm('本当に削除しますか？')) {
-                newsList.splice(index, 1);
-                localStorage.setItem('news', JSON.stringify(newsList));
-                renderNews();
-            }
-        };
-
-        renderNews();
-    });
-</script>
+    <script src="js/news.js"></script>
 </html>
   
 

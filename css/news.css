@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #121212;
-    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #E5FFF6;
+    color: #000;
     margin: 0;
     padding: 0;
 }
@@ -12,7 +12,7 @@ header {
     text-align: center;
     font-size: 2rem;
     padding: 20px;
-    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    background: linear-gradient(#7FDFFF,#E5FFF6);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -30,7 +30,7 @@ header {
 }
 
 .news-card {
-    background: #1e1e1e;
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -64,7 +64,7 @@ header {
     padding: 15px;
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
     text-decoration: none;
-    color: white;
+    color: #000;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -72,3 +72,196 @@ header {
 .read-more:hover {
     background: linear-gradient(135deg, #ff4b2b, #ff416c);
 }
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+#g-nav{
+    position:fixed;
+    z-index: 999;
+    top:-200%;
+    left:0;
+    width:100%;
+    height:40vh;
+    background:#fff8;
+    transition: all 0.6s;
+  }
+  
+  
+#g-nav.panelactive{
+    top: 0;
+  }
+  
+#g-nav.panelactive #g-nav-list{
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 40vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  
+#g-nav ul {
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+#g-nav li{
+  list-style: none;
+  text-align: center; 
+  }
+  
+#g-nav li a{
+  color: #808080;
+  text-shadow: 0 0 20px #fff , 0 0 20px #fff , 0 0 20px #fff;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 18px;
+  
+  position: relative;
+  overflow: hidden;
+  transition: all .2s;
+  }
+  
+#g-nav li.current a,
+#g-nav li a:hover{
+  
+    background: #fff;
+    color:#808080;
+  }
+  
+#g-nav li a:hover{
+    transition-delay: .5s;
+}
+  
+#g-nav li a:before,
+#g-nav li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width:100%;
+    background: #fff;
+    transition: all .5s;
+}
+  
+#g-nav li a::before {
+    top: 0;
+    transform: translateX(-100%);
+}
+#g-nav li a::after {
+    bottom: 0;
+    transform: translateX(100%);
+}
+  
+  
+#g-nav li a:hover::before ,
+#g-nav li a:hover::after {
+      transform: translateX(0);
+}
+  
+  
+.openbtn{
+    position:fixed;
+    z-index: 9999;
+    top:20px;
+    right: 10px;
+    cursor: pointer;
+    width: 60px;
+    height:60px;
+}
+  .openbtn .openbtn-area{
+    transition: all .6s;
+}
+  
+  
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 60%;
+    transition: all .6s;
+}
+  
+.openbtn span:nth-of-type(1) {
+  top:15px;	
+}
+  
+.openbtn span:nth-of-type(2) {
+  top:23px;
+}
+  
+.openbtn span:nth-of-type(3) {
+  top:31px;
+}
+.openbtn span:nth-of-type(3)::after {
+      content:"Menu";
+      position: absolute;
+      top:5px;
+      left:-2px;
+      color: #fff;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+}
+  
+  .openbtn.active .openbtn-area{
+      transform: rotateX(360deg);
+}
+  
+  
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+  
+  .openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+  
+  .openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+  .openbtn.active span:nth-of-type(3)::after {
+      content:"Close";
+    transform: translateY(0) rotate(-45deg);
+      top:5px;
+      left:4px;
+    font-size: 15px;
+}
+
+footer{
+    text-align: center;
+    font-size: 1rem;
+    background-color: #7FDFFF;
+}
+

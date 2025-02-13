@@ -12,6 +12,19 @@
     <header id="he-ad"></header>
     <div class="scrolldown2"><span>Scroll</span></div>
 
+    <div class="wrap">
+        <div class="openbtn"><div class="openbtn-area"><span></span><span></span><span></span></div></div>
+        <nav id="g-nav">
+        <div id="g-nav-list">
+        <ul>
+            <li><a href="news.html">ニュース</a></li>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="yoyaku_page.html">予約ページ</a></li>
+            <li><a href="toukou.html">投稿</a></li>
+        </ul>
+        </div>
+        </nav>
+
 <main>
 
     <section id="sec02">
@@ -52,33 +65,11 @@
     <p class="js-pagetop scroll-top"><a href="#he-ad">Page Top</a></p>
 </main>
 
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-    const scrollTopButton = document.querySelector('.js-scroll');
-    const pageTopButton = document.querySelector('.js-pagetop');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-
-            scrollTopButton.classList.remove('scroll-view');
-            pageTopButton.classList.add('scroll-view');
-        } else {
-
-            scrollTopButton.classList.add('scroll-view');
-            pageTopButton.classList.remove('scroll-view');
-        }
-    });
-});
-</script>
-
 <div class="font">
     <h3><i class="fa-solid fa-mobile" style="color: #000; font-size: 14px"></i> 090-8628-6286(本田)</h3>
     <h3><i class="fa-solid fa-location-dot" style="color: #000; font-size: 14px"></i>九州</h3>
 </div>
-
+    <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/83e72ec066.js" crossorigin="anonymous"></script>
 </body>
 <footer>
