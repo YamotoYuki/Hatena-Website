@@ -58,7 +58,7 @@ header {
   }
   
 #g-nav li a{
-  color: #808080;
+  color: #000;
   text-shadow: 0 0 20px #fff , 0 0 20px #fff , 0 0 20px #fff;
   text-decoration: none;
   padding:10px;
@@ -76,8 +76,8 @@ header {
 #g-nav li.current a,
 #g-nav li a:hover{
   
-    background: #fff;
-    color:#808080;
+    background: #E5FFF6;
+    color:#000;
   }
   
 #g-nav li a:hover{

@@ -30,7 +30,10 @@
       <input type="hidden" name="access_key" value="3f1d91ca-ee69-48b2-a04a-4f39f5cd4cc9">
       <input type="text" name="name" placeholder="名前" class="contact-inputs" required>
       <input type="email" name="email" placeholder="メールアドレス" class="contact-inputs" required>
-      <input type="datetime-local" id="date" name="date" class="contact-inputs" placeholder="希望日時">
+      <input type="datetime-local" id="date" name="date" class="contact-inputs" 
+      onfocus="(this.type='datetime-local')" 
+      onblur="if(!this.value) this.type='text'" 
+      placeholder="希望日時">  
       <textarea name="message" placeholder="ご要望リクエスト等" class="contact-inputs" required></textarea>
       <button type="submit">予約する<img src="images/arrow_icon.png"></button>
     </form>
